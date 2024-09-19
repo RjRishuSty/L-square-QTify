@@ -1,0 +1,43 @@
+.wrapper {
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search {
+  position: relative;
+  top: -10px;
+  padding: 14px 20px;
+  height: auto;
+  border-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 1px solid var(--color-secondary);
+  width: 502px;
+} 
+
+.searchButton {
+  position: relative;
+  top: -5px;
+  border-radius: 0px 8px 8px 0px;
+  padding: 14px 20px;
+  height: 46px;
+  border: 1px solid var(--color-secondary);
+  border-left: none;
+  background-color: var(--color-text);
+  cursor: pointer;
+}
+
+.listElement {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.albumTitle {
+  font-size: 16px;
+}
+
+.albumArtists {
+  font-size: 12px;
+}

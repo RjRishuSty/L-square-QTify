@@ -1,0 +1,10 @@
+.giveFeedback {
+  width: 15%;
+  height: 47px;
+  border-radius: 12px !important;
+  color: var(--color-primary) !important;
+  font-size: 18px !important;
+  letter-spacing: 1px;
+  text-transform: capitalize !important;
+  font-weight: 600;
+}

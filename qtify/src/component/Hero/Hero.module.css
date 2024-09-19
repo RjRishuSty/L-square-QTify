@@ -1,0 +1,16 @@
+.hero {
+  background-color: var(--color-secondary);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+.content {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: center;
+  color: var(--color-text);
+}
