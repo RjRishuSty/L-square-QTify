@@ -1,0 +1,93 @@
+.musicPlayerBox {
+  /* border: 2px solid red; */
+  background-color: var(--color-secondary) !important;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 0px -2px 6px 0px #FFFFFF59;
+
+}
+.player {
+  /* border: 2px solid rgb(72, 27, 196); */
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.playerCard {
+  /* border: 2px solid yellow !important; */
+  width: 20% !important;
+  height: auto;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 10px;
+  border-radius: 10px !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: var(--color-secondary) !important;
+}
+.playerCardImg {
+  width: 75.85px !important;
+  height: 82px !important;
+}
+.songName {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: var(--color-text);
+}
+.albumName {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  position: relative;
+  top: 5px !important;
+  color: var(--color-text);
+}
+
+/* musicPlayer */
+.musicPlayer {
+  /* border: 2px solid red; */
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.playerIcon {
+  /* border: 1px solid white !important; */
+  width: 50px;
+  height: 50px;
+  font-size: 48px !important;
+  font-weight: 400;
+  border-radius: 110%;
+  background-color: var(--color-text);
+  color: var(--color-secondary);
+  /* position: relative;
+  top: 1px; */
+}
+
+.playerController {
+  /* border: 2px solid yellow; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playerMenu {
+  width: 100%;
+  height: auto;
+  margin: 0px 10px 0px 10px !important;
+  color: var(--color-primary) !important;
+}
+.timer {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}

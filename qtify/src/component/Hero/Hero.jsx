@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./Hero.module.css";
-import { Grid2, item } from "@mui/material";
+import { Grid2 } from "@mui/material";
 
 function Hero() {
   return (
     <Grid2
       container
-      spacing={2}
+      spacing={3}
       className={styles.hero}
-      sx={{ border: "2px solid white",py:5 }}
+      sx={{py:5 }}
     >
       <Grid2 item md={7} sm={6} xs={12}>
         <h1 className={styles.content}>100 Thousand Songs, ad-free</h1>

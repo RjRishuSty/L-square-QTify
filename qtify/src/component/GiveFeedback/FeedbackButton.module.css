@@ -7,4 +7,6 @@
   letter-spacing: 1px;
   text-transform: capitalize !important;
   font-weight: 600;
+  background-color: var(--color-secondary) !important;
 }
+ 

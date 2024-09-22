@@ -1,18 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: Lato;
+  font-family: "PT Sans", sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 57.6px;
   text-align: left;
 }
 
+
 :root {
   --color-primary: #34C94B;
   --color-secondary: #121212;
   --color-text: #ffffff;
+
+  /* Next Prev button font size */
+  --arrow-button-size:30px;
+
+  /* Card ka laya */
+  /* --Paper-shadow:none; */
+}
+
+/* LODER CSS ........................ */
+.loderBox{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

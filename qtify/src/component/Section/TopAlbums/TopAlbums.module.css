@@ -1,0 +1,54 @@
+.albums {
+  /* border: 2px solid red !important; */
+  width: 100% !important;
+  height: auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-secondary);
+  flex-direction: column;
+  padding-bottom: 50px;
+  background-color: var(--color-secondary);
+}
+.filterButton {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: auto;
+  padding: 2px 30px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topAlbums {
+  font-size: 17px !important;
+  font-weight: 500;
+  letter-spacing: 1px; 
+  text-transform: uppercase;
+  color: var(--color-text) !important;
+  background-color: transparent !important;
+  cursor: pointer !important;
+}
+.showAll {
+  font-size: 17px !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-primary) !important;
+  background-color: transparent !important;
+  cursor: pointer !important;
+}
+
+.cardContainer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 25px;
+  left: 12px;
+  gap: 40px;
+}
+.cardDetails {
+  width: 159px;
+  height: 232px;
+  gap: 6px;
+}
+

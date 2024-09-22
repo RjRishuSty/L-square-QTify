@@ -1,0 +1,62 @@
+.songsBox {
+    /* border: 2px solid white !important; */
+    width: 100% !important;
+    height: auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary);
+    flex-direction: column;
+    padding-bottom: 50px;
+    background-color: var(--color-secondary);
+  }
+  .filterButton {
+    /* border: 2px solid rgb(246, 246, 246); */
+    width: 100%;
+    height: auto;
+    padding: 2px 30px !important;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+  .songs {
+    font-size: 17px !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-text) !important;
+    background-color: transparent !important;
+    cursor: pointer !important;
+  }
+  .fiterBox{
+    /* border: 3px solid rgb(0, 255, 26); */
+    width: 100%;
+    height: auto;
+    
+  }
+.tabs{
+  /* border: 1px solid white;  */
+  width: 50%;
+  height: auto;
+  padding-left: 15px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tab{
+  text-transform: capitalize !important;
+  color: var(--color-text) !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  letter-spacing: 1px !important;
+  font-weight: 400;
+}
+.tabPanel{
+  /* border: 2px solid red; */
+  width: 100% !important;
+  height: auto !important;
+  margin: 0;
+}
+  
+  
