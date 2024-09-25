@@ -10,7 +10,7 @@
   border-radius: 12px !important;
   color: var(--color-primary) !important;
   background-color: var(--color-secondary) !important;
-  font-family: "Poppins";
+  font-family: "Poppins" !important;
 }
  
 @media (max-width:1173px) {
