@@ -5,12 +5,15 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-weight: 700;
 }
 a{
   text-decoration: none !important;
+}
+button{
+  font-family:"Poppins","Roboto", Helvetica, Arial, sans-serif;
 }
 
 :root {
