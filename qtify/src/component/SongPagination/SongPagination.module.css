@@ -1,0 +1,47 @@
+.box {
+  padding: 50px 100px 100px 100px;
+}
+.pagination {
+  /* border: 2px solid red !important; */
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background-color: var(--color-secondary);
+}
+.number {
+  /* border: 2px solid rgb(59, 231, 7); */
+}
+
+.table {
+  /* border: 2px solid red; */
+  border: none !important;
+  width: 100%;
+  height: auto;
+  background-color: var(--color-secondary) !important;
+  color: var(--color-text) !important;
+}
+.tr{
+  border: none !important;
+}
+.tableCell {
+  color: var(--color-text) !important;
+  font-size: 16px;
+  border: none !important;
+  font-weight: 400;
+}
+
+.tableContent{
+font-size: 14px;
+font-weight: 400;
+color: var(--color-text);
+
+}
+.image {
+  width: 59px;
+  height: 64px;
+  border-radius: 4px;
+  margin-right: 10px !important;
+}
+.active {
+  background-color: var(--color-primary);
+}

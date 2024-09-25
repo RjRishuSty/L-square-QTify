@@ -3,24 +3,22 @@
   background-color: var(--color-secondary) !important;
   width: 100%;
   height: auto;
-  padding: 20px;
   display: flex;
-  justify-content: start;
+  justify-content: space-around;
   align-items: center;
   box-shadow: 0px -2px 6px 0px #FFFFFF59;
 
 }
 .player {
-  /* border: 2px solid rgb(72, 27, 196); */
-  width: 80%;
+  width: auto;
   height: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  /* padding: 10px 50px; */
+  flex-direction: column;
 }
 .playerCard {
-  /* border: 2px solid yellow !important; */
-  width: 20% !important;
   height: auto;
   display: flex !important;
   justify-content: center !important;
@@ -32,7 +30,7 @@
   background-color: var(--color-secondary) !important;
 }
 .playerCardImg {
-  width: 75.85px !important;
+  width: 100px !important;
   height: 82px !important;
 }
 .songName {
@@ -48,16 +46,6 @@
   color: var(--color-text);
 }
 
-/* musicPlayer */
-.musicPlayer {
-  /* border: 2px solid red; */
-  width: 50%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 .playerIcon {
   /* border: 1px solid white !important; */
   width: 50px;
@@ -72,16 +60,16 @@
 }
 
 .playerController {
-  /* border: 2px solid yellow; */
-  width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* padding: 10px 50px; */
 }
 
 .playerMenu {
   width: 100%;
+  min-width: 450px !important;
   height: auto;
   margin: 0px 10px 0px 10px !important;
   color: var(--color-primary) !important;
@@ -90,4 +78,24 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--color-text);
+}
+
+@media (max-width:662px) {
+  .playerMenu {
+    width: 100%;
+    min-width: 350px !important;
+    height: auto;
+    margin: 0px 10px 0px 10px !important;
+    color: var(--color-primary) !important;
+  }
+}
+
+@media (max-width:534px) {
+  .playerMenu {
+    width: 100%;
+    min-width: 250px !important;
+    height: auto;
+    margin: 0px 10px 0px 10px !important;
+    color: var(--color-primary) !important;
+  }
 }

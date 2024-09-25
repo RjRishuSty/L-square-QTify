@@ -4,7 +4,7 @@ import { Box, Chip } from "@mui/material";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import SwiperComponent from "../../SwiperComponent/SwiperComponent";
+import SwiperComponent from "../SwiperComponent/SwiperComponent";
 import CircularProgress from "@mui/material/CircularProgress";
 import styles from "./Songs.module.css";
 
@@ -37,7 +37,7 @@ function a11yProps(index) {
   };
 }
 
-export default function Songs() {
+export default function Songs({setCurrSong}) {
   const [value, setValue] = React.useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [songsData, setSongsData] = useState([]);
@@ -50,11 +50,11 @@ export default function Songs() {
     // console.log("event", event.target.id);
     if (!songsData) return;
     const filteredSongs = songsData.filter(
-      (item) => item.genre.key === event.target.id
+      (item) => item.genre.key === event.target.id 
     );
     // console.log(filteredSongs)
     setFilterSongs(filteredSongs);
-  };
+  }; 
 
   const fetchCardApi = async () => {
     try {
@@ -86,7 +86,7 @@ export default function Songs() {
     load();
   }, []);
   return (
-    <Box className={styles.songsBox} container>
+    <Box className={styles.songsBox} fullWidth>
       <Box className={styles.filterButton}>
         <Chip className={styles.songs} label="Songs" />
         <Chip className={styles.showAll} label="" />
@@ -107,7 +107,7 @@ export default function Songs() {
                 return (
                   <Tab
                     className={styles.tab}
-                    label={item.label}
+                    label={item.label} 
                     {...a11yProps(index)}
                     key={item.key}
                     id={item.key}
@@ -123,21 +123,21 @@ export default function Songs() {
               <CircularProgress color="success" />
             </Box>
           ) : (
-            <SwiperComponent cardDetailes={songsData} />
+            <SwiperComponent setCurrSong={setCurrSong} cardDetailes={songsData} />
           )}
         </CustomTabPanel>
 
         <CustomTabPanel value={value} index={1}>
-          <SwiperComponent cardDetailes={filterSongs} />
+          <SwiperComponent setCurrSong={setCurrSong} cardDetailes={filterSongs} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          <SwiperComponent cardDetailes={filterSongs} />
+          <SwiperComponent setCurrSong={setCurrSong} cardDetailes={filterSongs} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={3}>
-          <SwiperComponent cardDetailes={filterSongs} />
+          <SwiperComponent setCurrSong={setCurrSong} cardDetailes={filterSongs} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={4}>
-          <SwiperComponent cardDetailes={filterSongs} />
+          <SwiperComponent setCurrSong={setCurrSong} cardDetailes={filterSongs} />
         </CustomTabPanel>
       </Box>
     </Box>

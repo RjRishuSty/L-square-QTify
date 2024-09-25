@@ -8,6 +8,7 @@
   justify-content: space-between;
 }
 .navbarBrand {
+  /* border: 2px solid yellow; */
   color: var(--color-text);
   display: flex;
   justify-content: center;

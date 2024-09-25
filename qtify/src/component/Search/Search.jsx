@@ -1,113 +1,93 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styles from "./Search.module.css";
+import SearchItem from "../SearchItem/SearchItem";
 import SearchIcon from "../SearchIcon/SearchIcon";
-import useAutocomplete from "@mui/material/useAutocomplete";
-import { styled } from "@mui/system";
-// import { truncate } from "../../helpers/helpers";
 import { useNavigate } from "react-router-dom";
-import { Tooltip } from "@mui/material";
+import { Link } from "react-router-dom";
+import CloseIcon from "@mui/icons-material/Close";
+import Typography from "@mui/material/Typography";
 
-const Listbox = styled("ul")(({ theme }) => ({
-  width: "100%",
-  margin: 0,
-  padding: 0,
-  position: "absolute",
-  borderRadius: "0px 0px 10px 10px",
-  border: "1px solid var(--color-primary)",
-  top: 60,
-  height: "max-content",
-  maxHeight: "500px",
-  zIndex: 10,
-  overflowY: "scroll",
-  left: 0,
-  bottom: 0,
-  right: 0,
-  listStyle: "none",
-  backgroundColor: "var(--color-black)",
-  overflow: "auto",
-  "& li.Mui-focused": {
-    backgroundColor: "#4a8df6",
-    color: "white",
-    cursor: "pointer",
-  },
-  "& li:active": {
-    backgroundColor: "#2977f5",
-    color: "white",
-  },
-}));
+function Search({ allAlbumsData, placeholder }) {
+  // console.log("Search",allAlbumsData)
+  const [filterData, setFilterData] = useState(null);
+  const [searchValue, setSearchValue] = useState("");
 
-function Search({ searchData, placeholder }) {
-  const {
-    getRootProps,
-    getInputLabelProps,
-    value,
-    getInputProps,
-    getListboxProps,
-    getOptionProps,
-    groupedOptions,
-  } = useAutocomplete({
-    id: "use-autocomplete-demo",
-    options: searchData || [],
-    getOptionLabel: (option) => option.title,
-  });
-
-  const navigate = useNavigate();
-  const onSubmit = (e, value) => {
-    e.preventDefault();
-    console.log(value);
-    navigate(`/album/${value.slug}`);
-    //Process form data, call API, set state etc.
+  const onChangeHandler = (e) => {
+    setSearchValue(e.target.value);
+    if (e.target.value === "") {
+      setFilterData(null);
+      return;
+    }
+    const regEx = new RegExp(`^${e.target.value}`, "i");
+    const data = allAlbumsData.filter(
+      (item) => item.title.match(regEx) !== null
+    );
+    setFilterData(data);
   };
 
+  const inputRef = useRef(null);
+  const cleanSearchInput = () => {
+    console.log("Clicked");
+    if (inputRef.current) {
+      inputRef.current.value = "";
+    }
+    setSearchValue("");
+    setFilterData(null);
+  };
+
+  const OnSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
-    <div style={{ position: "relative"}}>
-      <form
-        className={styles.wrapper}
-        onSubmit={(e) => {
-          onSubmit(e, value);
-        }}
-      >
-        <div {...getRootProps()}>
+    <div style={{ position: "relative" }}>
+      <form className={styles.wrapper} onSubmit={OnSubmit}>
+        <div>
           <input
             name="album"
             className={styles.search}
-            placeholder={placeholder} 
-            required
-            {...getInputProps()}
+            placeholder={placeholder}
+            ref={inputRef}
+            onChange={onChangeHandler}
           />
         </div>
         <div>
-          <button className={styles.searchButton} type="submit">
-            <SearchIcon/>
-          </button>
+          {!searchValue ? ( 
+            <button className={styles.searchButton} type="submit">
+              <SearchIcon />
+            </button>
+          ) : (
+            <button
+              className={styles.closebtn}
+              type="submit"
+              onClick={cleanSearchInput}
+            >
+              <CloseIcon />
+            </button>
+          )}
         </div>
       </form>
-      {groupedOptions.length > 0 ? (
-        <Listbox {...getListboxProps()}>
-          {groupedOptions.map((option, index) => {
-            // console.log(option);
-            const artists = option.songs.reduce((accumulator, currentValue) => {
-              accumulator.push(...currentValue.artists);
-              return accumulator;
-            }, []);
-
+      <div
+        className={
+          !filterData
+            ? `${styles.searchResults} ${styles.hide}`
+            : `${styles.searchResults}`
+        }
+      >
+        {filterData && filterData.length ? (
+          filterData.map((item) => {
             return (
-              <li
-                className={styles.listElement}
-                {...getOptionProps({ option, index })}
+              <Link
+                to={`/albums/${item.slug}`}
+                style={{ textDecoration: "none" }}
               >
-                <div>
-                  <p className={styles.albumTitle}>{option.title}</p>
-
-                  <p className={styles.albumArtists}>
-                    {/* {truncate(artists.join(", "), 40)} */}
-                  </p>
-                </div>
-              </li>
+                <SearchItem album={item} />
+              </Link>
             );
-          })}
-        </Listbox>
-      ) : null}
+          })
+        ) : (
+          <Typography className={styles.text}> No Albums Found</Typography>
+        )}
+      </div>
     </div>
   );
 }

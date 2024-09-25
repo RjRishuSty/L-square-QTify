@@ -14,3 +14,14 @@
   text-align: center;
   color: var(--color-text);
 }
+
+@media (max-width: 680px) {
+  .hero {
+    position: relative;
+    top: 55px;
+  }
+  .content{
+    padding: 0px 20px;
+  }
+  
+}

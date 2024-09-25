@@ -5,19 +5,22 @@ import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
 import FeedbackButton from "../GiveFeedback/FeedbackButton";
 
-function Navbar({ searchData }) {
+function Navbar({ allAlbumsData }) {
+  // console.log('Navbar',allAlbumsData)
   return (
     <nav className={styles.navbar}>
-      <Link className={styles.navbarBrand}>
+      <Link to="/" className={styles.navbarBrand}>
         <Logo />
         <span className={styles.brandName}>Q</span>
         <span id={styles.brandName}>tify</span>
       </Link>
       <Search
         placeholder="Search a song of your choice"
-        searchData={searchData}
+        allAlbumsData={allAlbumsData}
       />
-      <FeedbackButton/>
+      <Link to="">
+        <FeedbackButton />
+      </Link>
     </nav>
   );
 }

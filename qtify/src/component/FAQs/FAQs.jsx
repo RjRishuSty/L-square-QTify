@@ -19,7 +19,7 @@ export default function FAQs() {
         <h1 className={styles.heading}>FAQs</h1>
         <Accordion
           className={styles.fqaItem}
-          expanded={expanded === "panel1"}
+          expanded={expanded === "panel1"} 
           onChange={handleChange("panel1")}
         >
           <AccordionSummary
@@ -35,7 +35,7 @@ export default function FAQs() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget.
-            </Typography>
+            </Typography> 
           </AccordionDetails>
         </Accordion>
         <Accordion

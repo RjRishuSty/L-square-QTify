@@ -41,7 +41,15 @@
   border-radius: 0px 0px 10px 10px;
   background-color: var(--color-text) !important;
 }
-.faqsText{
+.faqsText {
   font-size: 18px;
   font-weight: 500;
+}
+/* .css-20bmp1-MuiSvgIcon-root {
+  background-color: var(--color-text) !important;
+} */
+@media (max-width: 894px) {
+  .fqaItem {
+    width: 80%;
+  }
 }

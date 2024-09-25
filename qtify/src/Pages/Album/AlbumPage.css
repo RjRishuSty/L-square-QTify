@@ -1,0 +1,70 @@
+.AlbumBox {
+  background-color: var(--color-secondary) !important;
+}
+.arrow {
+  border: 1px solid var(--color-text);
+  width: 48px !important; 
+  height: 48px !important;
+  border-radius: 110%;
+  font-size: 1.5rem !important;
+  color: var(--color-text) !important;
+  background-color: var(--color-secondary) !important;
+  padding: 10px;
+}
+.card{
+  background-color: transparent !important;
+
+}
+.cardImg {
+  width: 288px;
+  height: 329px;
+  border-radius: 20px !important;
+}
+.heading {
+  font-size: 40px !important;
+  font-weight: 600 !important;
+  color: var(--color-text) !important;
+}
+.description {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: var(--color-text) !important;
+}
+ul{
+  position: relative;
+  top: -10px;
+}
+li{
+  border: none !important;
+  color: var(--color-text) !important;
+  background-color: var(--color-secondary) !important;
+  text-align: start;
+}
+.btn-success{
+  border-radius: 12px !important;
+  padding: 10px 20px !important;
+  color: var(--color-text) !important;
+  background-color: var(--color-primary) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  text-transform: capitalize !important;
+}
+
+.btn-library{
+  border: 1px solid var(--color-primary) !important;
+    border-radius: 12px !important;
+    padding: 10px 20px !important;
+    color: var(--color-primary) !important;
+    background-color: var(--color-secondary) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-transform: capitalize !important;
+}
+
+.page-item{
+  background-color: var(--color-secondary) !important;
+}
+
